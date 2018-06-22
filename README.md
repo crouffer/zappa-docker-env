@@ -10,7 +10,7 @@ Python 3.6 Image used for building and deploying flask apps in AWS Lambda using 
 [![Size](https://images.microbadger.com/badges/image/crouffer/zappa-build-env:1.0.svg)](https://microbadger.com/images/crouffer/zappa-build-env:1.0 "Get your own image badge on microbadger.com")
 
 
-#Testing the Flask App locally
+# Testing the Flask App locally
 ```bash
 docker run -v `pwd`/zappa-example/:/code -w /code -p 80:80 -it crouffer/zappa-build-env
 python3 -m venv ./venv
@@ -21,19 +21,19 @@ python3 app.py
 
 From your web browser, navigate to [http://localhost:80](http://localhost:80/)
 
-#Deploying and testing on Lambda
-##Prepare the virtual environment
+# Deploying and testing on Lambda
+## Prepare the virtual environment
 ```bash
 docker run -v `pwd`/zappa-example/:/code -w /code -p 80:80 -it crouffer/zappa-build-env -e AWS_ACCESS_KEY_ID=<your_aws_access_key> -e AWS_SECRET_ACCESS_KEY=<your_aws_secret_access_key>
 pip install -r requirements.txt
 ```
-##Initialize the Zappa project
+## Initialize the Zappa project
 ```bash
 zappa init
 ```
 Chose the default values, or customize as desired
 
-##Deploy the Application to Lambda
+## Deploy the Application to Lambda
 ```bash
 zappa deploy dev
 ```
