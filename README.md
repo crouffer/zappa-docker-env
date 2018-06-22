@@ -24,7 +24,7 @@ From your web browser, navigate to [http://localhost:80](http://localhost:80/)
 # Deploying and testing on Lambda
 ## Prepare the virtual environment
 ```bash
-docker run -v `pwd`/zappa-example/:/code -w /code -p 80:80 -it crouffer/zappa-build-env -e AWS_ACCESS_KEY_ID=<your_aws_access_key> -e AWS_SECRET_ACCESS_KEY=<your_aws_secret_access_key>
+docker run -v `pwd`/zappa-example/:/code -w /code -p 80:80 -e AWS_ACCESS_KEY_ID=<your_aws_access_key> -e AWS_SECRET_ACCESS_KEY=<aws_secret_access_key> -it crouffer/zappa-build-env:1.0
 pip install -r requirements.txt
 ```
 ## Initialize the Zappa project
