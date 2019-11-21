@@ -7,8 +7,7 @@ LABEL   com.chrisrouffer.vendor="Chris Rouffer"
 
 RUN     yum update -y && \
         yum install -y \
-        python36 \
-
+        python36
 
 ENV     LC_ALL=en_US.UTF-8
 ENV     LANG=en_US.UTF-8
@@ -24,8 +23,6 @@ RUN     easy_install-3.6 pip
 
 ENV     PYMSSQL_BUILD_WITH_BUNDLED_FREETDS=1
 
+COPY    requirements.txt ./
 RUN     pip3 install --upgrade pip && \
-        pip3 install \
-        pymssql \
-        zappa \
-        flask
+        pip3 install -r requirements.txt

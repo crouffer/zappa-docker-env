@@ -1,0 +1,4 @@
+awscli
+pymssql<3.0
+zappa
+flask
