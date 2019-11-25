@@ -5,10 +5,6 @@ LABEL   com.chrisrouffer.version="1.0"
 LABEL   com.chrisrouffer.release-date="2018-06-21"
 LABEL   com.chrisrouffer.vendor="Chris Rouffer"
 
-RUN     yum update -y && \
-        yum install -y \
-        python36
-
 ENV     LC_ALL=en_US.UTF-8
 ENV     LANG=en_US.UTF-8
 
@@ -22,6 +18,10 @@ RUN     yum install -y \
 RUN     easy_install-3.6 pip
 
 ENV     PYMSSQL_BUILD_WITH_BUNDLED_FREETDS=1
+
+RUN     yum install -y gcc-c++ make \
+        && curl -sL https://rpm.nodesource.com/setup_10.x | bash \
+        && yum install -y nodejs
 
 COPY    requirements.txt ./
 RUN     pip3 install --upgrade pip && \
