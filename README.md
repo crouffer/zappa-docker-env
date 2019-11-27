@@ -5,9 +5,9 @@ Python 3.6 Image used for building and deploying flask apps in AWS Lambda using 
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/crouffer/zappa-build-env.svg?style=flat-square)](https://hub.docker.com/r/crouffer/zappa-build-env/)
 
-[![Version](https://images.microbadger.com/badges/version/crouffer/zappa-build-env:1.2.svg)](https://microbadger.com/images/crouffer/zappa-build-env:1.2 "Get your own version badge on microbadger.com")
+[![Version](https://images.microbadger.com/badges/version/crouffer/zappa-build-env:1.4.svg)](https://microbadger.com/images/crouffer/zappa-build-env:1.4 "Get your own version badge on microbadger.com")
 
-[![Size](https://images.microbadger.com/badges/image/crouffer/zappa-build-env:1.2.svg)](https://microbadger.com/images/crouffer/zappa-build-env:1.2 "Get your own image badge on microbadger.com")
+[![Size](https://images.microbadger.com/badges/image/crouffer/zappa-build-env:1.4.svg)](https://microbadger.com/images/crouffer/zappa-build-env:1.4 "Get your own image badge on microbadger.com")
 
 
 # Testing the Flask App locally
